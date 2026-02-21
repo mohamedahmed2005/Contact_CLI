@@ -1,4 +1,4 @@
-﻿namespace Contact_CLI
+﻿namespace Contact_CLI.Presentation_Layer
 {
     internal class Program
     {
