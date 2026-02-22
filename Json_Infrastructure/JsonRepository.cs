@@ -6,8 +6,13 @@ namespace Contact_CLI.Json_Infrastructure
 {
     public class JsonRepository : IContact_Repository
     {
-        private readonly string _filePath = "contacts.json";
+        private readonly string _filePath;
         private List<Contact> _contacts = new();
+
+        public JsonRepository(string filePath)
+        {
+            _filePath = filePath;
+        }
         public void LoadContacts()
         {
             if (!File.Exists(_filePath))
@@ -34,6 +39,7 @@ namespace Contact_CLI.Json_Infrastructure
                 new JsonSerializerOptions { WriteIndented = true });
 
             File.WriteAllText(_filePath, json);
+
         }
         public void AddContact(Contact contact)
         {

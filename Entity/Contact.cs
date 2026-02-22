@@ -13,5 +13,26 @@ namespace Contact_CLI.Entity
         public string Phone { get; private set; }
         public string Email { get; private set; }
         public DateTime CreationDate { get; private set; }
+        public Contact(int id, string name, string phone, string email)
+        {
+            Id = id;
+            Name = name;
+            Phone = phone;
+            Email = email;
+            CreationDate = DateTime.Now;
+        }
+
+        public void Update_name(string name)
+        {
+            Name = name;
+        }
+        public void Update_phone(string phone)
+        {
+            Phone = phone;
+        }
+        public void Update_email(string email)
+        {
+            Email = email;
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace Contact_CLI.Application_Layer.Interfaces
         void UpdateContact(Contact contact);
         void DeleteContact(int id);
         Contact GetContactById(int id);
-        IEnumerable<Contact> GetAllContacts();
+        List<Contact> GetAllContacts();
         void SaveChanges();
         void LoadContacts();
     }
